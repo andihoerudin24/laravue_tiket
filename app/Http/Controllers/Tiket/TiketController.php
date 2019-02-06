@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Tiket;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\Tiket\Tiket;
+use Symfony\Component\HttpFoundation\Response;
+use App\Http\Resources\TiketResource;
 
 class TiketController extends Controller
 {
@@ -14,72 +17,61 @@ class TiketController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return TiketResource::collection(Tiket::latest()->get());
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        Tiket::create($request->all());
+
+        return response('Created', Response::HTTP_CREATED);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * @param int $id
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function show(Tiket $tiket)
     {
-        //
+        return  $tiket;
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int                      $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tiket $tiket)
     {
-        //
+        $tiket->update($request->all());
+
+        return response('Updated', Response::HTTP_ACCEPTED);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tiket $tiket)
     {
-        //
+        $tiket->delete();
+
+        return response('Deleted', Response::HTTP_NO_CONTENT);
     }
 }

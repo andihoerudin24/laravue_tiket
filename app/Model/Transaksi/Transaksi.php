@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Model\Category;
+namespace App\Model\Transaksi;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Model\Tiket\Tiket;
 
-class Category extends Model
+class Transaksi extends Model
 {
     protected $guarded = [];
 
     public function tiket()
     {
-        return $this->hasMany(Tiket::class, 'category_id', 'id');
+        return $this->belongsTo(Tiket::class, 'id_tiket', 'id');
     }
 }
