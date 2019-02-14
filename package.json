@@ -13,13 +13,27 @@
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
+        "jquery": "^3.3.1",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
-        "vue": "^2.5.17"
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.5.22",
+        "vuetable-2": "^1.7.5"
+    },
+    "dependencies": {
+        "datatables": "^1.10.18",
+        "datatables.net": "^1.10.19",
+        "datatables.net-dt": "^1.10.19",
+        "laravel-echo": "^1.5.2",
+        "pusher-js": "^4.3.1",
+        "vue-router": "^3.0.2",
+        "vue-simplemde": "^0.5.1",
+        "vue-tables-2": "^1.4.70",
+        "vuetable": "^1.5.12",
+        "vuetify": "^1.5.0"
     }
 }

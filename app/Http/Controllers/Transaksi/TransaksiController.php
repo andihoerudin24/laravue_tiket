@@ -20,4 +20,12 @@ class TransaksiController extends Controller
 
         return response(Response::HTTP_ACCEPTED);
     }
+
+    public function update()
+    {
+        $transaksi = Transaksi::where('status', 0);
+        $transaksi->update(['status' => '1']);
+
+        return response(Response::HTTP_ACCEPTED);
+    }
 }

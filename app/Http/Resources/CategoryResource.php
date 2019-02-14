@@ -20,5 +20,9 @@ class CategoryResource extends JsonResource
             'name_category' => $this->name_category,
             'created_at' => \Carbon\Carbon::parse($this->created_at)->formatLocalized('%A, %d %B %Y'),
         ];
+
+        return[
+            'count' => 21,
+        ];
     }
 }

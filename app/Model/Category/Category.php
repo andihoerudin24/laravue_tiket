@@ -7,7 +7,7 @@ use App\Model\Tiket\Tiket;
 
 class Category extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['name_category'];
 
     public function tiket()
     {
