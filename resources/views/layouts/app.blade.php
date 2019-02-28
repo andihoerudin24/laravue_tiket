@@ -11,9 +11,15 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
     <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style type="text/css">
+        .navbar-expand-md {
+           background-color:  #27c8f9;
+         }
+      </style>
 </head>
 <body>
     <div id="app">
@@ -46,7 +52,13 @@
                             @endif
                         @else
                         <li class="nav-item">
-                            <router-link to="/categori" class="nav-link">Categori</router-link>
+                            <router-link to="/transaksi" class="nav-link">Transaksi</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/categori" class="nav-link"><i class="fab fa-cc-mastercard">Categori</i></router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/tiket" class="nav-link">Tiket</router-link>
                         </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -75,7 +87,6 @@
             @yield('content')
         </main>
     </div>
-
 
 </body>
 </html>

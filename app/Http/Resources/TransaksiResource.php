@@ -18,6 +18,8 @@ class TransaksiResource extends JsonResource
         return [
             'id' => $this->id,
             'name_tiket' => $this->tiket->name_tiket,
+            'harga_tiket' => $this->tiket->harga_tiket,
+            'total' => $this->tiket->harga_tiket * $this->qty,
             'qty' => $this->qty,
             'status' => $this->status,
             'created_at' => \Carbon\Carbon::parse($this->created_at)->formatLocalized('%A, %d %B %Y'),

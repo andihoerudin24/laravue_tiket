@@ -43,7 +43,7 @@ class TiketController extends Controller
      */
     public function show(Tiket $tiket)
     {
-        return  $tiket;
+        return new TiketResource($tiket);
     }
 
     /**

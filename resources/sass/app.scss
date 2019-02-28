@@ -1,14 +1,14 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
-@import url('https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons');
+
 
 // Variables
 @import 'variables';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import '~vuetify/dist/vuetify.min.css'; // Ensure you are using css-loader
-
+// main.styl
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

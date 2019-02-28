@@ -8,7 +8,7 @@ use App\Model\Transaksi\Transaksi;
 
 class Tiket extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['name_tiket', 'harga_tiket', 'jumlah_tiket', 'category_id'];
 
     public function categories()
     {

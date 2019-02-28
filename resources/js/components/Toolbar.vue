@@ -17,6 +17,8 @@ export default {
     return {
       items: [
         { title: "Category", to: "/", component:'./category/CategoryComponents'},
+        { title: "Tiket",    to: "/", component:'./tiket/TiketComponents'},
+        { title: "Transaksi",    to: "/", component:'./transaksi/TransaksiComponents'},
       ]
     }
   },

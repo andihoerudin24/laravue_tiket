@@ -3,19 +3,18 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
 require('./bootstrap');
 window.Vue = require('vue');
+import 'vue-css-donut-chart/dist/vcdonut.css';
 import Vue from 'vue'
-import {ServerTable, ClientTable, Event} from 'vue-tables-2';
 import Vuetify from 'vuetify'
-import 'jquery/dist/jquery.js'
-import 'datatables.net'
-
 import router from './Router/router.js'
-
+import vueMask from 'vue-jquery-mask';
+import Donut from 'vue-css-donut-chart';
+Vue.use(vueMask);
 Vue.use(Vuetify)
-Vue.use(ClientTable);
+Vue.use(Donut);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,6 +28,7 @@ Vue.use(ClientTable);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component',require('./components/ExampleComponent.vue').default);
+Vue.component('apphome',require('./components/Apphome.vue').default);
 Vue.component('category-component',require('./components/category/CategoryComponent.vue').default);
 Vue.component('create-category',require('./components/category/CreateCategory.vue').default);
 

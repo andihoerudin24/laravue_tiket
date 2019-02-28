@@ -1,23 +1,21 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card card-default">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" height="700">
+   <v-layout
+      align-center
+      column
+      justify-center
+    >
+      <h1 class="display-4 font-weight-thin mb-3">Aplikasi Pemesanan Tiket</h1>
+      <h4 class="subheading headline">Real Time Single Page Application</h4>
+    </v-layout>
+  </v-parallax>
 </template>
-
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
+export default {
+
+}
 </script>
+
+<style>
+
+</style>

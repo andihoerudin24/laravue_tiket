@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::view('/', 'home');
+Route::view('/', 'welcome');
 Route::view('/{any}', 'home');
 Route::view('/{any}/{any1}/{any2}', 'home');
+Route::view('/{any}/{any3}', 'home');

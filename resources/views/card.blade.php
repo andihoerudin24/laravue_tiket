@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card card-default">
                 <div class="card-body">
-                   <router-view></router-view>
+                    <apphome></apphome>
                 </div>
             </div>
         </div>
