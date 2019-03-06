@@ -3,5 +3,5 @@
 ## About Laravue-tiket
 
 
-Ticket booking application uses vue js and SPA router system vue:
+Ticket booking application uses vue js, vuetify, sweat alert and SPA router system vue:
 
